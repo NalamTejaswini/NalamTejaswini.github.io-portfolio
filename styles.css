@@ -456,3 +456,33 @@ img {
     width: 100%;
   }
 }
+
+
+/* ===== Recruiter-focused project cards ===== */
+.projects-grid-enhanced { gap: 1.25rem; }
+.project-card-enhanced { padding: clamp(1.25rem, 3vw, 2rem); overflow: hidden; position: relative; }
+.project-card-enhanced::before { content: ""; position: absolute; inset: 0 auto auto 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), transparent 72%); opacity: .65; }
+.project-topline { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.project-type { color: var(--accent); font: 500 .72rem var(--mono); letter-spacing: .07em; }
+.project-index { color: #64748b; font: 500 .8rem var(--mono); }
+.project-card-enhanced .project-header { align-items: flex-start; margin-bottom: .75rem; }
+.project-card-enhanced .project-header h3 { font-size: clamp(1.2rem, 2.4vw, 1.45rem); }
+.project-title-sub { display: block; color: var(--text-muted); font-size: .9rem; font-weight: 500; margin-top: .2rem; }
+.project-card-enhanced .project-date { white-space: nowrap; }
+.project-card-enhanced .project-desc { max-width: 850px; line-height: 1.75; margin-bottom: 1.35rem; }
+.project-impact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; margin: 1.2rem 0 1.35rem; }
+.project-impact { display: flex; align-items: flex-start; gap: .65rem; padding: .85rem; border: 1px solid var(--border); border-radius: 9px; background: rgba(255,255,255,.018); min-height: 82px; }
+.impact-icon { color: var(--accent); font: 500 .7rem var(--mono); padding-top: .15rem; }
+.project-impact strong { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }
+.project-impact small { display: block; color: var(--text-muted); font-size: .76rem; line-height: 1.45; }
+.project-stack-label { color: var(--text-muted); font: 500 .7rem var(--mono); letter-spacing: .08em; margin-bottom: .6rem; }
+.project-tech-enhanced { gap: .5rem; margin-bottom: 0; }
+.project-tech-enhanced span { padding: .35rem .65rem; border: 1px solid rgba(56,189,248,.18); border-radius: 6px; background: rgba(56,189,248,.07); font-size: .76rem; }
+.project-links-enhanced { margin-top: 1.15rem; }
+.project-links-enhanced .btn { width: auto; }
+@media (max-width: 650px) {
+  .project-card-enhanced .project-header { flex-direction: column; }
+  .project-card-enhanced .project-date { white-space: normal; }
+  .project-impact-grid { grid-template-columns: 1fr; }
+  .project-impact { min-height: auto; }
+}
