@@ -314,6 +314,16 @@ img {
   color: var(--text);
 }
 
+.skill-group-highlight {
+  position: relative;
+}
+
+.skill-group-highlight .skill-tags span {
+  border-color: rgba(56, 189, 248, 0.32);
+  background: rgba(56, 189, 248, 0.09);
+}
+
+
 /* ===== Projects ===== */
 .projects-grid {
   display: grid;
